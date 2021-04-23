@@ -8,5 +8,5 @@
   :頑張ってレベルを上げる;
   endif
   
-  emduml
+  @emduml
 ```
