@@ -1,10 +1,10 @@
 ```uml
   @startuml
   :体力=10;
-  :if(体力<=20)than(ture);
+  if(体力<=20)than(ture)
   :宿屋に泊まる;
-  :else(false);
+  else(false)
   :頑張ってレベルを上げる;
-  :endif;
+  endif
   @end
 ```
