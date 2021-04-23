@@ -1,13 +1,13 @@
 ```uml
   @startuml
   start
-  if(weather==0) then(yes)
+  if(weather値は) then(1)
   :快晴です;
-  elseif(weather==1) then(yes)
+  elsethen(2)
   :曇りです;
-  elseif(weather==2) then(yes)
+  else then(3)
   :雨です;
-  else(no)
+  else(その他)
   :不明です;
   endif
   end
