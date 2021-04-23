@@ -6,5 +6,5 @@
   else(false)
   :頑張ってレベルを上げる;
   endif
-  @end
+  @enduml
 ```
