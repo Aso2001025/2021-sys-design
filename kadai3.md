@@ -3,7 +3,7 @@
   start
   if(weather値は) then(1)
   :快晴です;
-  elsえ(2)
+  else(2)
   :曇りです;
   else(3)
   :雨です;
