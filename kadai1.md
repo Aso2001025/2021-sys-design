@@ -5,6 +5,6 @@
   :宿屋に泊まる;
   else(false)
   :頑張ってレベルを上げる;
-  endif
+  endif;
   @enduml
 ```
