@@ -1,5 +1,5 @@
 '''uml
   @startuml
-    ユーザー->webサーバ:ログイン
+    ユーザー -> webサーバ: ログイン
   @enduml
-'''uml
+'''
