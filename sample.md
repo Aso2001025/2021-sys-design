@@ -11,7 +11,7 @@
         webサーバー -> ユーザー: ログイン失敗メッセージを表示
       end
      end
-      
+    activate ユーザー
     
   @enduml
 ```
