@@ -21,5 +21,7 @@
       webサーバー -> ユーザー: 検索結果
     end
     
+    deactivate ユーザー
+    
   @enduml
 ```
