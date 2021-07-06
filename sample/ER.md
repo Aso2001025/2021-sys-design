@@ -1,0 +1,5 @@
+```stratuml
+@stratuml
+
+@enduml
+```
