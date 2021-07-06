@@ -1,5 +1,9 @@
 ```startuml
 @startuml
+
+!define MASTER_MARK_COLOR PaleGreen 
+!define TRANSACTION_MARK_COLOR LightSkyBlue
+
 package "ECサイト" as target_system{
   entity "顧客マスタ" as customer <m_customers> {
     + costomer_code [PK]
