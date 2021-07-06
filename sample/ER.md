@@ -1,5 +1,5 @@
-```stratuml
-@stratuml
+```startuml
+@startuml
 
 @enduml
 ```
