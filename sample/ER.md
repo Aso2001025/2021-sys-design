@@ -5,7 +5,7 @@
 !define TRANSACTION_MARK_COLOR LightSkyBlue
 
 package "ECサイト" as target_system{
-  entity "顧客マスタ" as customer <m_customers> {
+  entity "顧客マスタ" as customer <m_customers> <<M,MASTER_MARK_COLOR>>{
     + costomer_code [PK]
     --
     pass
@@ -17,7 +17,7 @@ package "ECサイト" as target_system{
     reg_date
   }
  
-  entity "購入テーブル" as purchase <d_purchase>{
+  entity "購入テーブル" as purchase <d_purchase> <<TRANSACTION_MARK_COLOR>>{
     + order_id [PK]
     --
     costomer_code [FK]
@@ -25,7 +25,7 @@ package "ECサイト" as target_system{
     total_price
   } 
  
-  entity "購入テーブル詳細" as purchase_detail <d_purchase_detail>{
+  entity "購入テーブル詳細" as purchase_detail <d_purchase_detail> <<TRANSACTION_MARK_COLOR>>{
     detail_id [PK]
     order_id [PK]
     --
@@ -34,14 +34,14 @@ package "ECサイト" as target_system{
     num
   }
   
-  entity "カテゴリマスタ" as category <m_category>{
+  entity "カテゴリマスタ" as category <m_category> <<M,MASTER_MARK_COLOR>>{
     category_id [PK]
     --
     name
     peg_date
   }
   
-  entity "商品マスタ" as items <m_items>{
+  entity "商品マスタ" as items <m_items> <<M,MASTER_MARK_COLOR>>{
     item_code [PK]
     --
     item_name
