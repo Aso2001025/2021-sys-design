@@ -13,7 +13,7 @@ package "ECサイト" as target_system{
     reg_date
  }
  
- entity "購入テーブル" as <d_purchase>{
+ entity "購入テーブル" as purchase <d_purchase>{
   + order_id [PK]
   --
   costomer_code [FK]
