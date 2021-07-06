@@ -11,15 +11,24 @@ package "ECサイト" as target_system{
     mail
     del_flag
     reg_date
- }
+  }
  
- entity "購入テーブル" as purchase <d_purchase>{
-  + order_id [PK]
-  --
-  costomer_code [FK]
-  purchase_date
-  total_price
- }
+  entity "購入テーブル" as purchase <d_purchase>{
+    + order_id [PK]
+    --
+    costomer_code [FK]
+    purchase_date
+    total_price
+  } 
+ 
+  entity "購入テーブル詳細" as purchase_detail <d_purchase_detail>{
+    detail_id [PK]
+    order_id [PK]
+    --
+    item_code [FK]
+    price 
+    num
+  }
 }
 
 @enduml
