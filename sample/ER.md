@@ -17,7 +17,7 @@ package "ECサイト" as target_system{
     reg_date
   }
  
-  entity "購入テーブル" as purchase <d_purchase> <<T.TRANSACTION_MARK_COLOR>>{
+  entity "購入テーブル" as purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>>{
     + order_id [PK]
     --
     costomer_code [FK]
@@ -25,7 +25,7 @@ package "ECサイト" as target_system{
     total_price
   } 
  
-  entity "購入テーブル詳細" as purchase_detail <d_purchase_detail> <<T.TRANSACTION_MARK_COLOR>>{
+  entity "購入テーブル詳細" as purchase_detail <d_purchase_detail> <<T,TRANSACTION_MARK_COLOR>>{
     detail_id [PK]
     order_id [PK]
     --
