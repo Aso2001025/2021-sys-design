@@ -29,6 +29,25 @@ package "ECサイト" as target_system{
     price 
     num
   }
+  
+  entity "カテゴリマスタ" as category <m_category>{
+    category_id [PK]
+    --
+    name
+    peg_date
+  }
+  
+  entity "商品マスタ" as items <m_items>{
+    item_code [PK]
+    --
+    item_name
+    price
+    category_id [FK]
+    image
+    detail
+    del_flag
+    reg_date
+  }
 }
 
 @enduml
