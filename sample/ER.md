@@ -12,6 +12,14 @@ package "ECサイト" as target_system{
     del_flag
     reg_date
  }
+ 
+ entity "購入テーブル" as <d_purchase>{
+  + order_id [PK]
+  --
+  costomer_code [FK]
+  purchase_date
+  total_price
+ }
 }
 
 @enduml
