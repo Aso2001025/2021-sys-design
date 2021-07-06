@@ -50,7 +50,7 @@ package "ECサイト" as target_system{
   }
 }
 
-customer ||--o{ purchase
+customer ||-r-o{ purchase
 
 @enduml
 ```
