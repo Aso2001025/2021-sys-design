@@ -1,6 +1,6 @@
 # DB定義書
 ## ER図
-[ER図はこちら]()
+[ER図はこちら]("https://github.com/Aso2001025/2021-sys-design/blob/main/sample/md/ER.md")
 
 # DBテーブルカラム一覧
 ### 購入テーブル (d_purchase)
