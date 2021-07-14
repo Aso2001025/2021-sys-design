@@ -98,9 +98,9 @@ m_items
 d_review
 |属性名|型|PK|NN|FK|
 |-----|-|--|--|--|
-|item_code|int(11)|○|○|○|
-|customers_code|int(11)|○|○|○|
 |review_code|int(11)|○|○||
+|item_code|int(11)|○|○|○|
+|customers_code|int(11)||○|○|
 |star|int(1)||○||
 |review_title|varchar(200)||||
 |review_detail|varchar(500)||||
