@@ -33,7 +33,7 @@ m_pets
 |属性名|型|PK|NN|FK|
 |-----|-|--|--|--|
 |pet_code|varchar(50)|○|○||
-|customers_code|varchar(50)||○|○|
+|customers_code|varchar(50)|○|○|○|
 |pet_name|varchar(20)||○||
 |pet_age|int(2)||○||
 |pet_category|varchar(20)||||
