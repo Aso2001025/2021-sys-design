@@ -32,7 +32,7 @@ m_customers
 m_pets
 |属性名|型|PK|NN|FK|
 |-----|-|--|--|--|
-|pet_code|varchar(50)|○|○||
+|pet_code|int(11)|○|○||
 |customers_code|varchar(50)|○|○|○|
 |pet_name|varchar(20)||○||
 |pet_age|int(2)||○||
@@ -54,7 +54,7 @@ m_allergy
 d_have_disease
 |属性名|型|PK|NN|FK|
 |-----|-|--|--|--|
-|pet_code|varchar(50)|○|○|○|
+|pet_code|int(11)|○|○|○|
 |customers_code|varchar(50)|○|○|○|
 |disease_code|varchar(50)|○|○|○|
 
@@ -62,7 +62,7 @@ d_have_disease
 d_have_allergy
 |属性名|型|PK|NN|FK|
 |-----|-|--|--|--|
-|pet_code|varchar(50)|○|○|○|
+|pet_code|int(11)|○|○|○|
 |customers_code|varchar(50)|○|○|○|
 |allergy_code|varchar(50)|○|○|○|
 
@@ -70,7 +70,7 @@ d_periodic_delivery
 |属性名|型|PK|NN|FK|
 |-----|-|--|--|--|
 |customers_code|varchar(50)|○|○|○|
-|item_code|varchar(50)|○|○|○|
+|item_code|int(11))|○|○|○|
 |delivery_interval|date||○||
 |next_delivery_date|date||○||
 |reg_date|date||○||
@@ -94,4 +94,14 @@ m_items
 |del_flag|int(1)||||
 |periodic_delivery|int(1)||○||
 |reg_date|date||○||
+
+d_review
+|属性名|型|PK|NN|FK|
+|-----|-|--|--|--|
+|item_code|int(11)|○|○|○|
+|customers_code|int(11)|○|○|○|
+|review_code|int(11)|○|○||
+|star|int(1)||○||
+|review_title|varchar(200)||||
+|review_detail|varchar(500)||||
 
