@@ -54,7 +54,7 @@ package "ECサイト" as target_system{
     --
   } 
   
-  entity "アレルギーテーブル" as have_allergy <d_have_allergy> <<T.TRANSACTION_MARK_COLOR>>{
+  entity "アレルギーテーブル" as have_allergy <d_have_allergy> <<T,TRANSACTION_MARK_COLOR>>{
     + #disease_code [PK][FK]
     #costomer_code[PK][FK]
     #allergy_code[PK][FK]
