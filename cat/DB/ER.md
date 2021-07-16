@@ -96,7 +96,7 @@ package "ECサイト" as target_system{
 customer ||-r-o{ purchase
 customer ||-d-o{ pet
 pet ||-d-o{ have_disease
-pet ||-dr-o{ have_allergy
+pet ||-d-r-o{ have_allergy
 have_disease }o-d-|| disease
 have_allergy }o-dr-|| allergy
 purchase ||-r-|{ purchase_detail
