@@ -101,17 +101,7 @@ package "ECサイト" as target_system{
   }
 }
 
-customer ||-r-o{ purchase
-customer ||-r-o{ periodic_delivery
-customer ||-d-o{ pet
-pet ||-d-o{ have_disease
-pet ||-l-o{ have_allergy
-have_disease }o-d-|| disease
-have_allergy }o-d-|| allergy
-purchase ||-r-|{ purchase_detail
-purchase_detail }o-d-|| items
-items ||-u-o{ periodic_delivery
-items }o-l-|| category
+
 
 @enduml
 ```
