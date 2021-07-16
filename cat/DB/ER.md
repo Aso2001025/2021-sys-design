@@ -18,7 +18,7 @@ package "ECサイト" as target_system{
     reg_date
   }
   
-  entity "ペットマスタ" as purchase <m_pets> <<M,MASTER_MARK_COLOR>>{
+  entity "ペットマスタ" as pet <m_pets> <<M,MASTER_MARK_COLOR>>{
     + pet_code [PK]
     --
     costomer_code [FK]
@@ -28,26 +28,26 @@ package "ECサイト" as target_system{
     reg_date
   } 
   
-  entity "病気マスタ" as purchase <m_disease> <<M,MASTER_MARK_COLOR>>{
+  entity "病気マスタ" as disease <m_disease> <<M,MASTER_MARK_COLOR>>{
     + disease_code [PK]
     --
     disease_name 
   } 
   
-  entity "アレルギーマスタ" as purchase <m_allergy> <<M,MASTER_MARK_COLOR>>{
+  entity "アレルギーマスタ" as allergy <m_allergy> <<M,MASTER_MARK_COLOR>>{
     + allergy_code [PK]
     --
     allergy_name 
   } 
   
-  entity "持病テーブル" as purchase <d_have_disease> <<T,TRANSACTION_MARK_COLOR>>{
+  entity "持病テーブル" as have_disease <d_have_disease> <<T,TRANSACTION_MARK_COLOR>>{
     + disease_code [PK][FK]
     costomer_code[PK][FK]
     disease_code[PK][FK]
     --
   } 
   
-  entity "アレルギーテーブル" as purchase <d_have_allergy> <<T.TRANSACTION_MARK_COLOR>>{
+  entity "アレルギーテーブル" as have_allergy <d_have_allergy> <<T.TRANSACTION_MARK_COLOR>>{
     + disease_code [PK][FK]
     costomer_code[PK][FK]
     allergy_code[PK][FK]
@@ -94,6 +94,11 @@ package "ECサイト" as target_system{
 }
 
 customer ||-r-o{ purchase
+customer ||-d-o{ pet
+pet ||-d-o{ have_disease
+pet ||-dr-o{ have_allergy
+have_disease }o-d-|| disease
+have_allergy }o-dr-|| allergy
 purchase ||-r-|{ purchase_detail
 purchase_detail }o-d-|| items
 items }o-l-|| category
