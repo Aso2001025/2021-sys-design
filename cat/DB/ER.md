@@ -54,13 +54,21 @@ package "ECサイト" as target_system{
     --
   } 
   
- 
-  entity "購入テーブル" as purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>>{
+  entity "定期便テーブル" as periodic_delivery <d_periodic_delivery> <<T,TRANSACTION_MARK_COLOR>>{
     + order_id [PK]
     --
     costomer_code [FK]
     purchase_date
     total_price
+  } 
+ 
+  entity "購入テーブル" as purchase <d_purchase> <<T,TRANSACTION_MARK_COLOR>>{
+    + costomer_code [PK][FK]
+    item_code [PK][FK]
+    --
+    delivery_interval
+    next_delivery_date
+    reg_date
   } 
  
   entity "購入テーブル詳細" as purchase_detail <d_purchase_detail> <<T,TRANSACTION_MARK_COLOR>>{
@@ -94,13 +102,15 @@ package "ECサイト" as target_system{
 }
 
 customer ||-r-o{ purchase
+customer ||-r-o{ periodic_delivery
 customer ||-d-o{ pet
 pet ||-d-o{ have_disease
-pet ||-d-r-o{ have_allergy
+pet ||-d-o{ have_allergy
 have_disease }o-d-|| disease
 have_allergy }o-dr-|| allergy
 purchase ||-r-|{ purchase_detail
 purchase_detail }o-d-|| items
+items ||-r-o{ periodic_delivery
 items }o-l-|| category
 
 @enduml
