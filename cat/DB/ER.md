@@ -107,8 +107,8 @@ customer ||-r-o{ purchase
 customer ||--o{ periodic_delivery
 customer ||-d-o{ pet
 items }o-l|| category
-pet ||-d-o{ have_disease
-pet ||-l-o{ have_allergy
+pet ||d-o{ have_disease
+pet ||-l-o{ have_allergy
 have_disease }o-d-|| disease
 have_allergy }o-d-|| allergy
 purchase ||-r-|{ purchase_detail
