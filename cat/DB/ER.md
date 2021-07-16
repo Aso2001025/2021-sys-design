@@ -112,7 +112,7 @@ pet ||--l-o{ have_allergy
 have_disease }o-d-|| disease
 have_allergy }o-d-|| allergy
 purchase ||-r-|{ purchase_detail
-purchase_detail }o-l-|| items
+purchase_detail }o-r-|| items
 items ||-u-o{ periodic_delivery
 
 
