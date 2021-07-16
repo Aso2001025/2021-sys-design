@@ -21,7 +21,7 @@ package "ECサイト" as target_system{
   entity "ペットマスタ" as pet <m_pets> <<M,MASTER_MARK_COLOR>>{
     + pet_code [PK]
     --
-    costomer_code [FK]
+    #costomer_code [FK]
     pet_name
     pet_age
     pet_category
@@ -48,30 +48,30 @@ package "ECサイト" as target_system{
   } 
   
   entity "持病テーブル" as have_disease <d_have_disease> <<T,TRANSACTION_MARK_COLOR>>{
-    + disease_code [PK][FK]
-    costomer_code[PK][FK]
-    disease_code[PK][FK]
+    + #disease_code [PK][FK]
+    #costomer_code[PK][FK]
+    #disease_code[PK][FK]
     --
   } 
   
   entity "アレルギーテーブル" as have_allergy <d_have_allergy> <<T.TRANSACTION_MARK_COLOR>>{
-    + disease_code [PK][FK]
-    costomer_code[PK][FK]
-    allergy_code[PK][FK]
+    + #disease_code [PK][FK]
+    #costomer_code[PK][FK]
+    #allergy_code[PK][FK]
     --
   } 
   
   entity "購入テーブル" as purchase <d_delivery> <<T,TRANSACTION_MARK_COLOR>>{
     + order_id [PK]
     --
-    costomer_code [FK]
+    #costomer_code [FK]
     purchase_date
     total_price
   } 
  
   entity "定期便テーブル" as periodic_delivery <d_periodic_purchase> <<T,TRANSACTION_MARK_COLOR>>{
-    + costomer_code [PK][FK]
-    item_code [PK][FK]
+    + #costomer_code [PK][FK]
+    #item_code [PK][FK]
     --
     delivery_interval
     next_delivery_date
@@ -82,7 +82,7 @@ package "ECサイト" as target_system{
     pet_code [PK]
      [PK]
     --
-    item_code [FK]
+    #item_code [FK]
     price 
     num
   }
