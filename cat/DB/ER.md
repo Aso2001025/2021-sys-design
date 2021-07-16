@@ -79,8 +79,8 @@ package "ECサイト" as target_system{
   } 
  
   entity "購入テーブル詳細" as purchase_detail <d_purchase_detail> <<T,TRANSACTION_MARK_COLOR>>{
-    pet_code [PK]
-     [PK]
+    +  detail_id [PK]
+    #order_id [PK][FK]
     --
     #item_code [FK]
     price 
