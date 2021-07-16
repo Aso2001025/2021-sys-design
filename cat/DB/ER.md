@@ -62,7 +62,14 @@ package "ECサイト" as target_system{
     total_price
   } 
  
-  
+  entity "定期便テーブル" as periodic_delivery <d_periodic_purchase> <<T,TRANSACTION_MARK_COLOR>>{
+    + costomer_code [PK][FK]
+    item_code [PK][FK]
+    --
+    delivery_interval
+    next_delivery_date
+    reg_date
+  } 
  
   entity "購入テーブル詳細" as purchase_detail <d_purchase_detail> <<T,TRANSACTION_MARK_COLOR>>{
     pet_code [PK]
@@ -95,7 +102,7 @@ package "ECサイト" as target_system{
 }
 
 customer ||-r-o{ purchase
-
+customer ||--o{ periodic_delivery
 customer ||-d-o{ pet
 pet ||-d-o{ have_disease
 pet ||-l-o{ have_allergy
@@ -103,7 +110,7 @@ have_disease }o-d-|| disease
 have_allergy }o-d-|| allergy
 purchase ||-r-|{ purchase_detail
 purchase_detail }o-d-|| items
-
+items ||-u-o{ periodic_delivery
 items }o-l-|| category
 
 
