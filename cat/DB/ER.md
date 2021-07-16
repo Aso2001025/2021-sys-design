@@ -28,13 +28,13 @@ package "ECサイト" as target_system{
     reg_date
   } 
   
-  entity "アレルギーマスタ" as purchase <m_disease> <<M,MASTER_MARK_COLOR>>{
+  entity "病気マスタ" as purchase <m_disease> <<M,MASTER_MARK_COLOR>>{
     + disease_code [PK]
     --
     disease_name 
   } 
   
-  entity "病気マスタ" as purchase <m_allergy> <<M,MASTER_MARK_COLOR>>{
+  entity "アレルギーマスタ" as purchase <m_allergy> <<M,MASTER_MARK_COLOR>>{
     + allergy_code [PK]
     --
     allergy_name 
