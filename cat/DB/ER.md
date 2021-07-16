@@ -28,6 +28,13 @@ package "ECサイト" as target_system{
     reg_date
   } 
   
+  entity "カテゴリマスタ" as category <m_category> <<M,MASTER_MARK_COLOR>>{
+    category_id [PK]
+    --
+    name
+    peg_date
+  }
+  
   entity "病気マスタ" as disease <m_disease> <<M,MASTER_MARK_COLOR>>{
     + disease_code [PK]
     --
@@ -80,12 +87,7 @@ package "ECサイト" as target_system{
     num
   }
   
-  entity "カテゴリマスタ" as category <m_category> <<M,MASTER_MARK_COLOR>>{
-    category_id [PK]
-    --
-    name
-    peg_date
-  }
+  
   
   entity "商品マスタ" as items <m_items> <<M,MASTER_MARK_COLOR>>{
     item_code [PK]
