@@ -98,7 +98,7 @@ package "ECサイト" as target_system{
     image
     detail
     del_flag
-    periodic_delivery_flag
+    periodic_delivery
     reg_date
   }
 }
