@@ -92,7 +92,7 @@ m_items
 |image|varchar(200)||○||
 |detail|varchar(500)||||
 |del_flag|int(1)||||
-|periodic_delivery|int(1)||○||
+|periodic_delivery_flag|int(1)||○||
 |reg_date|date||○||
 
 d_review
